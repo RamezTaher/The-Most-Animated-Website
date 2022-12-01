@@ -171,46 +171,7 @@ export default class InformationSection {
         }
     }
 
-    setActivities() {
-        // Set up
-        this.activities = {};
-        this.activities.x = this.x + 0;
-        this.activities.y = this.y - 10;
-        this.activities.multiplier = 5.5;
-
-        // Geometry
-        this.activities.geometry = new THREE.PlaneBufferGeometry(
-            2 * this.activities.multiplier,
-            1 * this.activities.multiplier,
-            1,
-            1
-        );
-
-        // Texture
-        this.activities.texture =
-            this.resources.items.informationActivitiesTexture;
-        this.activities.texture.magFilter = THREE.NearestFilter;
-        this.activities.texture.minFilter = THREE.LinearFilter;
-
-        // Material
-        this.activities.material = new THREE.MeshBasicMaterial({
-            wireframe: false,
-            color: 0xffffff,
-            alphaMap: this.activities.texture,
-            transparent: true,
-        });
-
-        // Mesh
-        this.activities.mesh = new THREE.Mesh(
-            this.activities.geometry,
-            this.activities.material
-        );
-        this.activities.mesh.position.x = this.activities.x;
-        this.activities.mesh.position.y = this.activities.y;
-        this.activities.mesh.matrixAutoUpdate = false;
-        this.activities.mesh.updateMatrix();
-        this.container.add(this.activities.mesh);
-    }
+    setActivities() {}
 
     setTiles() {
         this.tiles.add({
