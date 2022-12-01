@@ -1,16 +1,14 @@
 
 ## Setup
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
 
 ``` bash
-# Just be sure that you've got parcel js on you system
+#  parcel js on you system
 npm install -g parcel-bundler
 
-# Install dependencies (only for first time)
+# Install dependencies 
 npm i
 
-# Serve at localhost:1234
+# Serve at localhost
 npm run dev
 
 # Build for production in the dist/ directory
